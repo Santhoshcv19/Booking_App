@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
+import background from "./background.jpg";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -12,7 +13,7 @@ const Login = () => {
 
   const { loading, error, dispatch } = useContext(AuthContext);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -24,16 +25,17 @@ const Login = () => {
     try {
       const res = await axios.post("/auth/login", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
-      navigate('/')
+      navigate('/');
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
   };
 
-
   return (
-    <div className="login">
+    <div className="login" style={{ backgroundImage: `url(${background})`, backgroundSize: '100% 100%', width: '100vw', height: '100vh' }}>
       <div className="lContainer">
+      <h1 style={{ textAlign: 'center', fontSize: '2em', marginBottom: '0.5px', color: 'white' }}>Trip Planner</h1>
+      <h4 style={{ textAlign: 'center', marginBottom: '5px', color: 'white' }}>Client</h4>
         <input
           type="text"
           placeholder="username"
