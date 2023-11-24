@@ -39,7 +39,7 @@ const NewHotel = ({ }) => {
         ...info, rooms, photos:list,
       };
 
-      await axios.post("/hotels",newhotel)
+      await axios.post("https://booking-app-server-bdzt.onrender.com/api/hotels",newhotel)
     }catch(err){
 
     }
