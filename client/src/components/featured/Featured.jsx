@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
 
-  const { data,loading,error } = useFetch("/hotels/countByCity?cities=berlin,madrid,london");
+  const { data,loading,error } = useFetch("https://booking-app-server-bdzt.onrender.com/api/hotels/countByCity?cities=berlin,madrid,london");
 
   return (
     <div className="featured">
