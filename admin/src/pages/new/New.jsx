@@ -27,7 +27,7 @@ const New = ({ inputs, title }) => {
         img: url,
       };
 
-      await axios.post("/auth/register",newUser);
+      await axios.post("https://booking-app-server-bdzt.onrender.com/api/auth/register",newUser);
     }catch(err){
       console.log(err)
     }
