@@ -38,7 +38,7 @@ const Login = () => {
 
 
   return (
-    <div className="login">
+    <div className="login" style = {{ backgroundImage: "https://raw.githubusercontent.com/Santhoshcv19/Booking_App/7610ed6e471454f355b8ab1003103507edcea3c3/admin/src/pages/login/back.jpg", backgroundSize: '100% 100%', width: '100vw', height: '100vh' }}>
       <div className="lContainer">
         <input
           type="text"
