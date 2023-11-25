@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
+import background from "./back.jpg"; 
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -32,7 +33,7 @@ const Login = () => {
 
 
   return (
-    <div className="login">
+    <div className="login" style={{ backgroundImage: `url(${background})`, backgroundSize: '100% 100%', width: '100vw', height: '100vh' }}>
       <div className="lContainer">
         <input
           type="text"
