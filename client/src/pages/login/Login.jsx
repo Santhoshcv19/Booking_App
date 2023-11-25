@@ -35,6 +35,8 @@ const Login = () => {
   return (
     <div className="login" style={{ backgroundImage: `url(${background})`, backgroundSize: '100% 100%', width: '100vw', height: '100vh' }}>
       <div className="lContainer">
+        <h1 style={{ textAlign: 'center', fontSize: '2em', marginBottom: '0.5px', color: 'white' }}>Trip Planner</h1>
+        <h4 style={{ textAlign: 'center', marginBottom: '5px', color: 'white' }}>Client</h4>
         <input
           type="text"
           placeholder="username"
