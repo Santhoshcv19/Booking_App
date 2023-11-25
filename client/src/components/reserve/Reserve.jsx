@@ -48,7 +48,7 @@ const Reserve = ({ setOpen, hotelId }) => {
     const handleClick = async () => {
         try{
             await Promise.all(selectedRooms.map(roomId =>{
-                const res = axios.put(`/rooms/availablity/${roomId}`, {dates: alldates,});
+                const res = axios.put(`https://booking-app-server-bdzt.onrender.com/api/rooms/availablity/${roomId}`, {dates: alldates,});
                 return res.data
             }))
             setOpen(false);
